@@ -1,5 +1,5 @@
 from mitreattack.stix20 import MitreAttackData
-mitre_attack_data = MitreAttackData("enterprise-attack.json")
+mitre_attack_data = MitreAttackData("/tmp/enterprise-attack.json")
 
 def lambda_handler(event, context):
     tactics_map = mitre_attack_data.get_tactics_by_matrix()

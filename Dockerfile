@@ -7,7 +7,7 @@ COPY requirements.txt ${LAMBDA_TASK_ROOT}
 RUN pip install -r requirements.txt
 
 # Copy enterprise-attack.json
-COPY enterprise-attack.json ${LAMBDA_TASK_ROOT}
+COPY enterprise-attack.json /tmp/enterprise-attack.json
 
 # Copy function code
 COPY lambda_function.py ${LAMBDA_TASK_ROOT}

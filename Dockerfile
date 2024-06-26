@@ -4,7 +4,7 @@ FROM public.ecr.aws/lambda/python:3.11
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
 
 # Install the specified packages
-RUN pip install -r requirements.txt
+RUN pip install --target /var/lang/lib/python3.11/site-packages -r requirements.txt
 
 # Copy enterprise-attack.json
 COPY enterprise-attack.json /tmp/enterprise-attack.json
